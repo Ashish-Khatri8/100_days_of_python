@@ -7,7 +7,7 @@ from random import choice, randint, shuffle
 
 
 class PasswordManager:
-    """A class to represent the whole app."""
+    """A class to represent the Password Manager app."""
     def __init__(self):
         """Initialize app attributes and methods."""
         self.bg_color = "light steel blue"
@@ -29,7 +29,7 @@ class PasswordManager:
         """Creates a canvas with the logo on it."""
         self.canvas = Canvas(width=200, height=200)
         self.canvas.config(bg=self.bg_color, highlightthickness=0)
-        self.lock_image = PhotoImage(file="./logo.png")
+        self.lock_image = PhotoImage(file="logo.png")
         self.canvas.create_image(140, 100, image=self.lock_image)
         self.canvas.grid(row=0, column=1)
 
@@ -107,9 +107,8 @@ class PasswordManager:
                 with open("passwords.txt", mode="a") as file:
                     file.write(data)
                 self.clear_entries()
-
-            # Tell the user that details are successfully saved.
-            messagebox.showinfo(title="Saved", message="Details saved successfully.")
+                # Tell the user that details are successfully saved.
+                messagebox.showinfo(title="Saved", message="Details saved successfully.")
 
     def check_entries(self, website, username, email, password):
         """Returns True if none of the entries is empty, otherwise returns False."""
