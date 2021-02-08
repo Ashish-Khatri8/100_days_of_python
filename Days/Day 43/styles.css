@@ -1,0 +1,26 @@
+body {
+    background-color: #c7ffd8;
+}
+
+hr {
+    background-color: black;
+    color: black;
+    height: 5px;
+}
+
+li {
+    color: #58391c;
+}
+
+.label {
+    color: #350b40;
+    font-size: 30px;
+    text-align: center;
+}
+
+#heading {
+    color: #161d6f;
+    font-size: 100px;
+    text-align: center;
+    vertical-align: top;
+}
